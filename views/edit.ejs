@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q Beleza</title>
+</head>
+<body>
+
+<h2>Editar Serviço</h2>
+  <% servicos.forEach(function(details) { %>
+    <form action="/edit/<%= details._id %>" method="POST">
+      <input type="text" value="<%= details.nome %>" name="nome">
+      <input type="text" value="<%= details.descricao %>" name="descricao">
+      <input type="text" value="<%= details.preco %>" name="preco">
+      <br />
+      <button><a href="/show">Voltar</a></button>
+      <button type="submit">Editar</button>
+    </form>
+  <% }) %>
+
+</body>
+</html>
